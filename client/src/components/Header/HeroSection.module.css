@@ -1,0 +1,128 @@
+.heroSection {
+    display: flex;
+    position: relative;
+    height: 600px !important;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  z-index:-11;
+    user-select: none;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+  }
+  
+  .imageContainer {
+    position: relative;
+    overflow: hidden;
+    height: min(100%, 600px);
+    width: 100%;
+  }
+  
+  .scrollBack {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+  }
+  
+  .scrollBackBottom {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scrollP {
+    margin: 0px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    white-space: pre;
+  }
+  
+  /* HeroSection.module.css */
+
+.registerButton {
+  /* Positioning */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Spacing and Size */
+  padding: 1rem 2rem;
+  /* Background and Text Color */
+  background-color: #000; /* Blue */
+  color: white;
+  /* Border and Border Radius */
+  border: none;
+  border-radius: 0.5rem;
+  /* Hover Effects */
+  transition: background-color 0.3s ease;
+}
+
+.registerButton:hover {
+  background-color: wheat; /* Darker Blue on Hover */
+}
+
+
+  .heroScrollTextContainer {
+    color: white;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+    animation: scrollText 3s linear infinite;
+  }
+  .heroScrollTextContainertwo {
+    color: white;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+    animation: scrollText 3s linear infinite reverse;
+  }
+
+  @keyframes scrollText  {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
+  .backgroundImage {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .backgroundImageI {
+    z-index: 0;
+    width: 100%;
+    height: 80%;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .heroSection {
+      padding: 0px;
+    }
+    .backgroundImageI {
+        z-index: 0;
+         width: auto !important;
+         height:600px !important;
+        object-fit: cover;
+      }
+      
+  }
